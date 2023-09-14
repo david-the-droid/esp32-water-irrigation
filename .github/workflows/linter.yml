@@ -30,6 +30,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           style: file
+          extensions: 'c,h,C,H,cpp'
 
       - name: Fail fast?!
         if: steps.linter.outputs.checks-failed > 0
