@@ -13,3 +13,5 @@ jobs:
       - uses: arduino/arduino-lint-action@v1
         with:
           recursive: true 
+          library-manager: update
+          compliance: strict
