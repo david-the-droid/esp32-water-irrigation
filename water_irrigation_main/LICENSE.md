@@ -1,2 +1,2 @@
-# Licence file 
+# Licence file  
 Welcome to use software
