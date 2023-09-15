@@ -28,7 +28,8 @@ jobs:
       - name: Run Super linter
         uses: super-linter/super-linter@v5
         env:
-          if: ${{ github.event.action }} == 'push'
           VALIDATE_ALL_CODEBASE: false
-          DEFAULT_BRANCH: ${{ github.base_ref }}
+          # for now we assume a basic branching strategy
+          DEFAULT_BRANCH: main
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          
