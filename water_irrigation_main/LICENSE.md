@@ -1,1 +1,1 @@
-"Licence file - code is free to use"
+# Licence file 
