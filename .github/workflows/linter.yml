@@ -22,6 +22,7 @@ jobs:
 
       - shell: pwsh
         run: |
+          git fetch origin main:main
           git diff --name-only main
 
       - name: Run Super linter
