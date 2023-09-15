@@ -28,6 +28,7 @@ jobs:
       - name: Run Super linter
         uses: super-linter/super-linter@v5
         env:
+          if: ${{ github.event.action }} == 'push'
           VALIDATE_ALL_CODEBASE: false
           DEFAULT_BRANCH: ${{ github.base_ref }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
