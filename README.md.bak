@@ -15,7 +15,6 @@ Development plan & releases:
     * Must be able to unit test driver level functionality locally
     * Must be able to clang-format and lint project
 	* Must have a PR template on Github
-	* A development board to track tasks and have tickets 
 	
 ## Release V2
   * Implementation:
