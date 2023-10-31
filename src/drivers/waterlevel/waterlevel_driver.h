@@ -3,9 +3,8 @@
 
 #include <Arduino.h>
 
-
 void WaterLevelInit(void);
 uint32_t CalculateWaterLevel(void);
 
 /* WATERLEVEL_DRIVER_H */
-#endif 
+#endif
