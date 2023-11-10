@@ -2,7 +2,7 @@
 Automated water irrigation project with the ESP32. Aim of this project are to: 
 * Be able to water plants using a series of relays and water pumps
 * Use the project to explore different implementation and testing methods 
-* Gain further familarity with Github as a tool 
+* Gain further familarity with GitHub as a tool 
 * Expand knowledge that can be fed into further projects for better efficiency
 
 ## To use: 
@@ -40,7 +40,8 @@ Development plan & releases:
   * Version and test infrastructure:
 	* Must be able to unit test driver level functionality locally
 	* Must be able to clang-format and lint project
-	* Must have a PR template on Github
+	* Must have a PR template on GitHub
+	* Must have a .gitignore file
 	* A development board to track tasks and have tickets 
   * Requirements met: 
 	* P_REQ1
