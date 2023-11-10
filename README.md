@@ -7,9 +7,9 @@ Automated water irrigation project with the ESP32. Aim of this project are to:
 - Gain further familarity with GitHub as a tool
 - Expand knowledge that can be fed into further projects for better efficiency
 
-## To use:
+## To use
 
-## Requirements:
+## Requirements
 
 Product water irrigation requirements (Release 1.1.x):
 
