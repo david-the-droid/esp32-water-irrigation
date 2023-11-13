@@ -29,6 +29,6 @@ jobs:
           # Think this conflicts with clang
           VALIDATE_CPP: false
           # for now we assume a basic branching strategy
-          DEFAULT_BRANCH: main
+          DEFAULT_BRANCH: ${{ github.base_ref }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           
