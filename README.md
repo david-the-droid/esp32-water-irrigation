@@ -1,6 +1,6 @@
 # esp32-water-irrigation
 
-Automated water irrigation project with the ESP32. Aim of this project are to:
+Automated water irrigation project with the ESP32. The aim of this project is to:
 
 - Be able to water plants using a series of relays and water pumps
 - Use the project to explore different implementation and testing methods
