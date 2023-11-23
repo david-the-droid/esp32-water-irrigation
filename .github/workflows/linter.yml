@@ -6,7 +6,7 @@ on:
   workflow_call:
 
 jobs:
-  lint:
+  Arduino_linter:
     name: Arduino Lint
     runs-on: ubuntu-latest
     steps:
@@ -16,19 +16,22 @@ jobs:
           recursive: true 
           library-manager: update
           compliance: strict
+  
+  Super_linter:
+     runs-on: ubuntu-latest
+     steps:
+     - shell: pwsh
+       run: |
+         git fetch origin main:main
+         git diff --name-only main
 
-      - shell: pwsh
-        run: |
-          git fetch origin main:main
-          git diff --name-only main
-
-      - name: Run Super linter
-        uses: super-linter/super-linter@v5
-        env:
-          VALIDATE_ALL_CODEBASE: false
-          # Think this conflicts with clang
-          VALIDATE_CPP: false
-          # for now we assume a basic branching strategy
-          DEFAULT_BRANCH: ${{ github.base_ref }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+     - name: Run Super linter
+       uses: super-linter/super-linter@v5
+       env:
+         VALIDATE_ALL_CODEBASE: false
+         # Think this conflicts with clang
+         VALIDATE_CPP: false
+         # for now we assume a basic branching strategy
+         DEFAULT_BRANCH: ${{ github.base_ref }}
+         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           
