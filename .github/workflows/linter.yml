@@ -6,24 +6,25 @@ on:
   workflow_call:
 
 jobs:
+
   Super_linter:
      name: Super Lint
      runs-on: ubuntu-latest
      steps:
-     - shell: pwsh
-       run: |
-         git fetch origin main:main
-         git diff --name-only main
-
-     - name: Run Super linter
-       uses: super-linter/super-linter@v5
-       env:
-         VALIDATE_ALL_CODEBASE: false
-         # Think this conflicts with clang
-         VALIDATE_CPP: false
-         # for now we assume a basic branching strategy
-         DEFAULT_BRANCH: ${{ github.base_ref }}
-         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+       - name: Fetch branch diff
+       - shell: pwsh
+         run: |
+           git fetch origin main:main
+           git diff --name-only main
+       - name: Run Super Linter
+         uses: super-linter/super-linter@v5     
+         env:
+           VALIDATE_ALL_CODEBASE: false
+           # Think this conflicts with clang
+           VALIDATE_CPP: false
+           # for now we assume a basic branching strategy
+           DEFAULT_BRANCH: ${{ github.base_ref }}
+           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
          
   Arduino_linter:
     name: Arduino Lint
