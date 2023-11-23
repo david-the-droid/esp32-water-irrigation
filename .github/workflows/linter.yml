@@ -18,6 +18,7 @@ jobs:
           compliance: strict
   
   Super_linter:
+     name: Super Lint
      runs-on: ubuntu-latest
      steps:
      - shell: pwsh
