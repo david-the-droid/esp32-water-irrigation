@@ -7,14 +7,21 @@ on:
 
 jobs:
 
+  Fetch_branch:
+    name: Get diff
+    runs-on: ubuntu-latest
+    steps:
+      - shell: pwsh
+        run: |
+          git fetch origin main:main
+          git diff --name-only main
+          
   Super_linter:
+     needs: Fetch_branch
      name: Super Lint
      runs-on: ubuntu-latest
      steps:
-       - shell: bash
-         run: |
-           git fetch origin main:main
-           git diff --name-only main
+     
        - name: Run Super Linter
          uses: super-linter/super-linter@v5     
          env:
