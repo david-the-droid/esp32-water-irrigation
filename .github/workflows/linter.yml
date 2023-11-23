@@ -6,17 +6,6 @@ on:
   workflow_call:
 
 jobs:
-  Arduino_linter:
-    name: Arduino Lint
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: arduino/arduino-lint-action@v1
-        with:
-          recursive: true 
-          library-manager: update
-          compliance: strict
-  
   Super_linter:
      name: Super Lint
      runs-on: ubuntu-latest
@@ -35,4 +24,17 @@ jobs:
          # for now we assume a basic branching strategy
          DEFAULT_BRANCH: ${{ github.base_ref }}
          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+         
+  Arduino_linter:
+    name: Arduino Lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: arduino/arduino-lint-action@v1
+        with:
+          recursive: true 
+          library-manager: update
+          compliance: strict
+  
+  
           
