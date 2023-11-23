@@ -11,6 +11,7 @@ jobs:
      name: Super Lint
      runs-on: ubuntu-latest
      steps:
+       - name: Fetch branch
        - shell: pwsh
          run: |
            git fetch origin main:main
