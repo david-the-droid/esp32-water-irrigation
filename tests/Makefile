@@ -9,7 +9,7 @@ tests:
 # $ make runtests | grep failed
 runtests:
 	set -e; \
-	for dir in $(PASSING_TESTS); do \
+	for dir in $(TESTS); do \
 		echo '==== Running:' $$dir; \
 		$(MAKE) -C $$dir run; \
 	done
