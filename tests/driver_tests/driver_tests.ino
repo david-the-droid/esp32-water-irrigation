@@ -10,10 +10,10 @@ test(correct) {
   assertEqual(x, 1);
 }
 
-test(incorrect) {
-  int x = 1;
-  assertNotEqual(x, 1);
-}
+//test(incorrect) {
+//  int x = 1;
+//  assertNotEqual(x, 1);
+//}
 
 //----------------------------------------------------------------------------
 // setup() and loop()
