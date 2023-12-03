@@ -1,0 +1,22 @@
+name: AUnit Tests
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Setup
+      run: |
+        cd ..
+        git clone https://github.com/bxparks/EpoxyDuino
+        git clone https://github.com/bxparks/AUnit
+        
+    - name: Run tests
+      run: |
+        make -C tests
+        make -C tests runtests
