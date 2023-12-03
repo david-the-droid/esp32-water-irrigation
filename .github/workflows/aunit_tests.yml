@@ -18,5 +18,5 @@ jobs:
         
     - name: Run tests
       run: |
-        make -C tests
-        make -C tests runtests
+        make -C tests/driver_tests
+        make -C tests/driver_tests runtests
