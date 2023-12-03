@@ -19,4 +19,4 @@ jobs:
     - name: Run tests
       run: |
         make -C tests/driver_tests
-        ./driver_tests.o
+        /home/runner/work/esp32-water-irrigation/esp32-water-irrigation/tests/driver_tests/driver_tests.o
