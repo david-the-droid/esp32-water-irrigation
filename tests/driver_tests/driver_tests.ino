@@ -11,13 +11,13 @@ test(correct) {
 }
 
 test(incorrect) {
-  uint8_t state;
+  int state;
   pinMode(11, OUTPUT);
   digitalWrite(11, true);
 
   state = digitalRead(11);
 
-  assertEqual(state, true);
+  assertEqual(state, 1);
 }
 
 //----------------------------------------------------------------------------
