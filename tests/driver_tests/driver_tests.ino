@@ -17,8 +17,8 @@ test(incorrect) {
 
   state = digitalRead(11);
 
-  Serial.print("State: ")
-  Serial.println(state)
+  Serial.print("State: ");
+  Serial.println(state);
 
   assertEqual(state, 1);
 }
